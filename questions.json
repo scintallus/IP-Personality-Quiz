@@ -1,1 +1,49 @@
 
+{
+  "title": "What Is Your Work Style Archetype?",
+  "description": "Answer 4 simple questions to discover how you naturally process problems, organize tasks, and execute ideas.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "When handed an ambiguous project, what is your first impulse?",
+      "options": [
+        { "label": "Brainstorm wild concepts without setting constraints.", "weights": { "architect": 3, "analyst": 0 } },
+        { "label": "Map out a granular timeline and break down sub-tasks.", "weights": { "architect": 0, "analyst": 3 } }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "How do you prefer to present recommendations to a group?",
+      "options": [
+        { "label": "Focus on high-level narrative, vision, and possibilities.", "weights": { "architect": 3, "analyst": 0 } },
+        { "label": "Provide rigorous data points, metrics, and risk assessments.", "weights": { "architect": 0, "analyst": 3 } }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "What causes you the most frustration during a workflow?",
+      "options": [
+        { "label": "Rigid processes that restrict experimentation.", "weights": { "architect": 3, "analyst": 0 } },
+        { "label": "Lack of documentation and moving goalposts.", "weights": { "architect": 0, "analyst": 3 } }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Which environment brings out your absolute best output?",
+      "options": [
+        { "label": "A blank canvas with room for big-picture strategy.", "weights": { "architect": 3, "analyst": 0 } },
+        { "label": "A structured problem space requiring optimization and precision.", "weights": { "architect": 0, "analyst": 3 } }
+      ]
+    }
+  ],
+  "results": {
+    "architect": {
+      "title": "The Strategic Architect",
+      "description": "You operate best at 30,000 feet. You synthesize abstract concepts quickly, spot macro patterns before others do, and excel at charting direction where clear roadmaps don't yet exist."
+    },
+    "analyst": {
+      "title": "The Systematic Analyst",
+      "description": "You are a master of execution and structural precision. You turn chaos into order, spot critical operational flaws, and ensure plans are backed by verifiable logic and structure."
+    }
+  }
+}
