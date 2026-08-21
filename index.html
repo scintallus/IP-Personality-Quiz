@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IP Week Personality Quiz</title>
+  <title>IP Week 2026 Personality Quiz</title>
   <style>
     :root {
-      --bg-color: #f8f9fa;
-      --card-bg: #ffffff;
-      --text-color: #212529;
-      --accent-color: #0d6efd;
-      --accent-hover: #0b5ed7;
-      --border-color: #e9ecef;
+      --bg-color: #0b132b;        /* Dark Navy */
+      --card-bg: #1c2541;       /* Deep Navy Card */
+      --text-color: #edf2f4;     /* Crisp Light Text */
+      --subtext-color: #8d99ae;  /* Muted Slate */
+      --accent-color: #f77f00;   /* Vibrant IP Orange */
+      --accent-hover: #d66800;   /* Deep Orange Hover */
+      --border-color: #3a506b;   /* Slate Border */
     }
 
     body {
@@ -29,117 +30,180 @@
 
     #app-container {
       background: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       max-width: 650px;
       width: 100%;
-      padding: 32px;
+      padding: 36px;
       box-sizing: border-box;
+      text-align: center;
     }
 
-    /* Progress Bar */
-    #progress {
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #6c757d;
+    /* Hero SVG Banner Art */
+    .hero-art {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      margin: 0 auto 24px auto;
+      display: block;
+    }
+
+    /* Landing Page Typography */
+    #landing-container h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-top: 0;
       margin-bottom: 12px;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    #landing-container p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--subtext-color);
+      margin-bottom: 28px;
+    }
+
+    /* Progress Indicator */
+    #progress {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-color);
+      margin-bottom: 16px;
+      text-align: left;
     }
 
     /* Question Typography */
     #question-text {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       line-height: 1.5;
       margin-top: 0;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
+      text-align: left;
+      color: #ffffff;
     }
 
-    /* Option Buttons */
+    /* Options List */
     #options-container {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
 
     .option-btn {
-      background-color: #f1f3f5;
+      background-color: #0b132b;
       border: 1px solid var(--border-color);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 16px;
       font-size: 1rem;
-      line-height: 1.4;
+      line-height: 1.5;
       text-align: left;
       color: var(--text-color);
       cursor: pointer;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease;
     }
 
     .option-btn:hover {
-      background-color: #e9ecef;
-      border-color: #ced4da;
-      transform: translateY(-1px);
+      background-color: #3a506b;
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
     }
 
     /* Results Section Styling */
+    #results-container {
+      text-align: left;
+    }
+
     #results-container h1 {
-      font-size: 1.75rem;
+      font-size: 2rem;
       margin-top: 0;
       margin-bottom: 8px;
       color: var(--accent-color);
     }
 
     #result-vibe {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-style: italic;
       font-weight: 600;
       margin-top: 0;
-      margin-bottom: 20px;
-      color: #495057;
+      margin-bottom: 24px;
+      color: #ffffff;
     }
 
     #result-description {
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.6;
       margin-bottom: 24px;
+      color: #edf2f4;
     }
 
     .result-details {
-      background-color: #f8f9fa;
+      background-color: #0b132b;
       border-left: 4px solid var(--accent-color);
-      padding: 16px 20px;
-      border-radius: 0 8px 8px 0;
+      padding: 20px;
+      border-radius: 0 10px 10px 0;
       margin-bottom: 28px;
     }
 
     .result-details p {
-      margin: 8px 0;
+      margin: 10px 0;
       line-height: 1.5;
+      color: #d8e2dc;
     }
 
-    #restart-btn {
+    .result-details strong {
+      color: #ffffff;
+    }
+
+    /* Main CTA Buttons */
+    .primary-btn {
       background-color: var(--accent-color);
       color: #ffffff;
       border: none;
-      border-radius: 8px;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: 600;
+      border-radius: 10px;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      font-weight: 700;
       cursor: pointer;
       width: 100%;
-      transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease, transform 0.1s ease;
     }
 
-    #restart-btn:hover {
+    .primary-btn:hover {
       background-color: var(--accent-hover);
+      transform: translateY(-1px);
     }
   </style>
 </head>
 <body>
 
   <main id="app-container">
-    <!-- Active Quiz View -->
-    <section id="quiz-container">
+    <!-- 1. Landing View -->
+    <section id="landing-container">
+      <!-- Abstract IP Graphic Artwork -->
+      <svg class="hero-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" stroke="#3a506b" stroke-width="4" stroke-dasharray="8 6"/>
+        <path d="M60 100 L100 60 L140 100 L100 140 Z" stroke="#f77f00" stroke-width="5" stroke-linejoin="round"/>
+        <circle cx="100" cy="100" r="16" fill="#f77f00"/>
+        <circle cx="60" cy="100" r="8" fill="#edf2f4"/>
+        <circle cx="140" cy="100" r="8" fill="#edf2f4"/>
+        <circle cx="100" cy="60" r="8" fill="#edf2f4"/>
+        <circle cx="100" cy="140" r="8" fill="#edf2f4"/>
+      </svg>
+
+      <h1>What’s Your IP Archetype?</h1>
+      <p>
+        Navigate 9 high-stakes scenarios from IP Week 2026 and reveal whether you're an Uncompromising Architect, a Brand Titan, or a Secret Vault Keeper.
+      </p>
+      <button class="primary-btn" onclick="startQuiz()">Start Quiz</button>
+    </section>
+
+    <!-- 2. Active Quiz View -->
+    <section id="quiz-container" style="display: none;">
       <div id="progress">
         Question <span id="current-q-num">1</span> of <span id="total-q-num">9</span>
       </div>
@@ -147,7 +211,7 @@
       <div id="options-container"></div>
     </section>
 
-    <!-- Hidden Results View -->
+    <!-- 3. Results View -->
     <section id="results-container" style="display: none;">
       <h1 id="result-title"></h1>
       <p id="result-vibe"></p>
@@ -160,7 +224,7 @@
         <p><strong>Motto:</strong> <span id="result-motto"></span></p>
       </div>
 
-      <button id="restart-btn" onclick="restartQuiz()">Retake Quiz</button>
+      <button class="primary-btn" onclick="restartQuiz()">Retake Quiz</button>
     </section>
   </main>
 
