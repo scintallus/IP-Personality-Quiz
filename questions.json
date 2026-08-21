@@ -4,7 +4,7 @@
     "text": "You have one free hour at the IP Week 2026 Marketplace. Where do you go first?",
     "options": [
       {
-        "label": "The booth with a complex apparatus using cutting-edge quantum fluid dynamics to predict which line at the supermarket cashier will move the fastest.",
+        "label": "The booth using cutting-edge quantum fluid dynamics to predict which line at the supermarket cashier will move the fastest.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
@@ -16,29 +16,29 @@
         "weights": { "copyright": 3, "design": 1 }
       },
       {
-        "label": "The booth featuring a product so aesthetically exquisite it comes wrapped in hand-stitched Corinthian leather, despite being an industrial drill bit.",
+        "label": "The booth featuring an industrial drill bit exquisitely wrapped in hand-stitched Corinthian leather.",
         "weights": { "design": 3 }
       }
     ]
   },
   {
     "id": 2,
-    "text": "During a feverish brainstorming session, your team stumbles upon an industry-disrupting idea (an NFC-enabled hawker-table booking system that prioritises based on proximity). What do you do next?",
+    "text": "Your team has invented a NFC-enabled hawker-table booking system. What do you do next?",
     "options": [
       {
-        "label": "Before the premature champagne-popping/yacht-purchasing, we do some proper research to make sure no one else has got there first.",
+        "label": "Before the champagne-popping/yacht-purchasing, we do some proper research to make sure no one else has got there first.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
-        "label": "We conclude the world is not ready for the massive societal upheaval this will cause and keep it exclusively for use in our staff canteen.",
+        "label": "The world is not ready for the massive societal upheaval this will cause. We keep it exclusively for use in our staff canteen.",
         "weights": { "trade_secret": 3 }
       },
       {
-        "label": "We decide the immediate priority is to brainstorm a catchy name for it before somebody defaults to 'Project Final FINAL_2'.",
+        "label": "The priority is to brainstorm a catchy name for it before somebody defaults to 'Project Final FINAL_2'.",
         "weights": { "trademark": 3 }
       },
       {
-        "label": "As part of our corporate social responsibility efforts, we open-source it for the benefit of humanity – after issuing a press release to ensure humanity knows who to thank.",
+        "label": "We open-source it for the benefit of humanity – after issuing a press release to ensure humanity knows who to thank.",
         "weights": { "public_domain": 3, "copyright": 1 }
       }
     ]
@@ -48,15 +48,15 @@
     "text": "Your primary competitor launches something that looks uncomfortably familiar to your product. What bothers you most?",
     "options": [
       {
-        "label": "They appear to have reproduced the mechanical thingamajig that makes the device work. This is inconvenient, as you had assured investors no one else would be able to.",
+        "label": "They have reproduced your top-secret mechanical thingamajig, despite your assurances to investors that no one else would be able to.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
-        "label": "Customers are getting confused (as customers do), despite our 47-page technical analysis painstakingly explaining the difference between the versions of Klein Blue our products are painted in.",
+        "label": "Customers are getting confused (as customers do), despite our 47-page technical analysis painstakingly explaining the differences.",
         "weights": { "trademark": 3 }
       },
       {
-        "label": "The blurb on the back of their product box appears to be a copy of ours, including the typo that states '[insert compelling customer testimonial]'.",
+        "label": "The blurb on the back of their product box is a copy of ours, including the typo that states '[insert compelling customer testimonial]'.",
         "weights": { "copyright": 3, "trademark": 1 }
       },
       {
@@ -67,22 +67,22 @@
   },
   {
     "id": 4,
-    "text": "A prospective venture capitalist asks what makes your enterprise commercially unique. What do you lead with?",
+    "text": "A venture capitalist asks what makes your enterprise commercially unique. What do you lead with?",
     "options": [
       {
-        "label": "An elaborate technical breakdown of the functional apparatus, developed at the cost of several million dollars and the general mental wellbeing of the R&D team.",
+        "label": "Our technical process, developed at the cost of several million dollars and the general mental wellbeing of the R&D team.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
-        "label": "Years of accumulated goodwill, brand equity, and a courageous executive decision never to burden our marketing campaigns with anything recognisably related to the actual product.",
+        "label": "Years of accumulated goodwill and the courageous decision to never burden our marketing campaigns with anything related to the actual product.",
         "weights": { "trademark": 3, "design": 1 }
       },
       {
-        "label": "Your overworked team that has produced a library worth of SOPs, training manuals, proprietary software algorithms, and instructional media that keep the entire operation running.",
+        "label": "Your overworked team producing training manuals and proprietary software algorithms.",
         "weights": { "copyright": 3, "trademark": 1 }
       },
       {
-        "label": "The product looks so exceptionally refined that customers will pay twice as much for functionality they already own, only in a less flattering shape.",
+        "label": "The product looks so refined that customers will pay twice as much for functionality they already own.",
         "weights": { "design": 3, "trademark": 1 }
       }
     ]
@@ -92,33 +92,33 @@
     "text": "Your organisation develops a premium new coffee plant variety. What is the grand commercial plan?",
     "options": [
       {
-        "label": "We build the entire marketing campaign around the precise misty hillside responsible for its distinctive qualities. Every burlap sack of beans comes with a complimentary dusting of the local soil and a haiku about the terroir.",
+        "label": "A marketing campaign around the obscure misty hillside where the plant originates.",
         "weights": { "geographical_indication": 3, "copyright": 1 }
       },
       {
-        "label": "Consistency is the key. Our coffee plant has been successfully bred in environments ranging from the International Space Station, the bottom of the Marianas Trench, and a McDonald's bathroom.",
+        "label": "Consistency is the key. Our coffee plant has been successfully bred in the International Space Station, the bottom of the Marianas Trench, and a McDonald's bathroom.",
         "weights": { "plant_variety": 3, "geographical_indication": 1 }
       },
       {
-        "label": "We greenlight a multi-movie cinematic franchise in which our brooding, anthropomorphized coffee bean leads an underground rebellion against the soulless tyranny of Instant Coffee.",
+        "label": "We greenlight a multi-movie cinematic franchise in which our coffee bean leads an underground rebellion against Instant Coffee.",
         "weights": { "copyright": 3, "plant_variety": 1 }
       },
       {
-        "label": "We decide to share the love by cheerfully carpet-bombing seeds of our highly-invasive variety over our competitor's plantations.",
+        "label": "We share the love by freely distributing seeds of our highly-invasive variety to our competitors.",
         "weights": { "public_domain": 3, "copyright": 1 }
       }
     ]
   },
   {
     "id": 6,
-    "text": "Congratulations! Your product is objectively excellent, but sales are still lackluster. What do you think needs fixing?",
+    "text": "Your product is great, but sales are still low. What do you think needs fixing?",
     "options": [
       {
         "label": "Customers cannot remember its name. Neither can the writer of this personality quiz. Or you, for that matter.",
         "weights": { "trademark": 3, "copyright": 1 }
       },
       {
-        "label": "Customers care about provenance. Your product's origin story begins and ends with 'manufactured somewhere with favourable overheads'.",
+        "label": "Your product's origin story begins and ends with 'manufactured somewhere with favourable overheads'.",
         "weights": { "geographical_indication": 3, "trademark": 1 }
       },
       {
@@ -136,19 +136,19 @@
     "text": "You have been in product development for five years and still aren't ready to go to market. What keeps you going?",
     "options": [
       {
-        "label": "The latest batch of products are consistently performing to specification without the need for the engineering team to whisper words of encouragement.",
+        "label": "Your products finally work consistently without the engineering team whispering words of encouragement.",
         "weights": { "plant_variety": 3, "patent": 1 }
       },
       {
-        "label": "We finally proved our mechanism doesn't infringe on a patented steam-powered sausage press, despite the uncomfortable structural similarities.",
+        "label": "We finally proved our mechanism doesn't infringe on a patented steam-powered sausage press.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
-        "label": "We have recently achieved total operational security. The top secret proprietary process is documented nowhere and understood by no one.",
+        "label": "Total operational security. The proprietary process is documented nowhere and understood by no one.",
         "weights": { "trade_secret": 3, "patent": 1 }
       },
       {
-        "label": "You forge on in the knowledge that your work will become the foundation for the next generation. You persevere on for those who come after.",
+        "label": "You forge on in the knowledge that your work will become the foundation for the next generation.",
         "weights": { "public_domain": 3, "copyright": 1 }
       }
     ]
@@ -166,7 +166,7 @@
         "weights": { "design": 3, "trademark": 1 }
       },
       {
-        "label": "The audience may fall in love with the technology, leave the auditorium and immediately buy the identical-looking knockoff from your primary competitor.",
+        "label": "The audience may clap during the presentation but forget your company's name after leaving the auditorium.",
         "weights": { "trademark": 3, "design": 1 }
       },
       {
@@ -180,7 +180,7 @@
     "text": "Your business is ready to expand overseas. What is the first strategic question you think should be addressed?",
     "options": [
       {
-        "label": "How many foreign jurisdictions can we afford to ring-fence before the legal and filing fees surpass our company's valuation?",
+        "label": "How many foreign jurisdictions can we afford to ring-fence before the filing fees surpass our company's valuation?",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
