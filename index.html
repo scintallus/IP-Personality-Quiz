@@ -1,261 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IP Week 2026 Personality Quiz</title>
-  <style>
-    :root {
-      --bg-color: #0b132b;        /* Dark Navy Body Background */
-      --card-bg: #1c2541;       /* Deep Navy Card */
-      --text-color: #edf2f4;     /* Crisp Light Text */
-      --subtext-color: #8d99ae;  /* Muted Slate */
-      --accent-color: #f77f00;   /* Vibrant IP Orange */
-      --accent-hover: #d66800;   /* Deep Orange Hover */
-      --border-color: #3a506b;   /* Slate Border */
-      --glow-color: rgba(247, 127, 0, 0.4); /* Subtle Orange Glow */
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-
-    #app-container {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      max-width: 650px;
-      width: 100%;
-      padding: 36px;
-      box-sizing: border-box;
-      text-align: center;
-    }
-
-    /* Hero SVG Banner Art */
-    .hero-art {
-      width: 100%;
-      max-width: 220px;
-      height: auto;
-      margin: 0 auto 24px auto;
-      display: block;
-    }
-
-    /* Landing Page Typography */
-    #landing-container h1 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 12px;
-      color: #ffffff;
-      letter-spacing: -0.5px;
-    }
-
-    #landing-container p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--subtext-color);
-      margin-bottom: 28px;
-    }
-
-    /* Progress Header & Bar */
-    #progress-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent-color);
-      margin-bottom: 10px;
-    }
-
-    .progress-bar-track {
-      width: 100%;
-      height: 8px;
-      background-color: #0b132b;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-      margin-bottom: 24px;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      width: 0%;
-      background-color: var(--accent-color);
-      border-radius: 4px;
-      transition: width 0.3s ease-in-out;
-      box-shadow: 0 0 8px var(--accent-color);
-    }
-
-    /* Question Typography */
-    #question-text {
-      font-size: 1.3rem;
-      line-height: 1.5;
-      margin-top: 0;
-      margin-bottom: 28px;
-      text-align: left;
-      color: #ffffff;
-    }
-
-    /* Options List */
-    #options-container {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .option-btn {
-      background-color: #0b132b;
-      border: 1.5px solid var(--border-color);
-      border-radius: 10px;
-      padding: 16px;
-      font-size: 1rem;
-      line-height: 1.5;
-      text-align: left;
-      color: var(--text-color);
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-    }
-
-    /* Orange Glow Highlight on Hover */
-    .option-btn:hover {
-      background-color: #121e42;
-      border-color: var(--accent-color);
-      box-shadow: 0 0 12px var(--glow-color);
-      transform: translateY(-2px);
-    }
-
-    /* Results Section Styling */
-    #results-container {
-      text-align: left;
-    }
-
-    #results-container h1 {
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 8px;
-      color: var(--accent-color);
-    }
-
-    #result-vibe {
-      font-size: 1.15rem;
-      font-style: italic;
-      font-weight: 600;
-      margin-top: 0;
-      margin-bottom: 24px;
-      color: #ffffff;
-    }
-
-    #result-description {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 24px;
-      color: #edf2f4;
-    }
-
-    .result-details {
-      background-color: #0b132b;
-      border-left: 4px solid var(--accent-color);
-      padding: 20px;
-      border-radius: 0 10px 10px 0;
-      margin-bottom: 28px;
-    }
-
-    .result-details p {
-      margin: 10px 0;
-      line-height: 1.5;
-      color: #d8e2dc;
-    }
-
-    .result-details strong {
-      color: #ffffff;
-    }
-
-    /* Main CTA Buttons */
-    .primary-btn {
-      background-color: var(--accent-color);
-      color: #ffffff;
-      border: none;
-      border-radius: 10px;
-      padding: 16px 32px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      width: 100%;
-      transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
-    }
-
-    .primary-btn:hover {
-      background-color: var(--accent-hover);
-      box-shadow: 0 0 12px var(--glow-color);
-      transform: translateY(-1px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellectual Property Personality Diagnostic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4">
 
-  <main id="app-container">
-    <!-- 1. Landing View -->
-    <section id="landing-container">
-      <svg class="hero-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="80" stroke="#3a506b" stroke-width="4" stroke-dasharray="8 6"/>
-        <path d="M60 100 L100 60 L140 100 L100 140 Z" stroke="#f77f00" stroke-width="5" stroke-linejoin="round"/>
-        <circle cx="100" cy="100" r="16" fill="#f77f00"/>
-        <circle cx="60" cy="100" r="8" fill="#edf2f4"/>
-        <circle cx="140" cy="100" r="8" fill="#edf2f4"/>
-        <circle cx="100" cy="60" r="8" fill="#edf2f4"/>
-        <circle cx="100" cy="140" r="8" fill="#edf2f4"/>
-      </svg>
+    <main class="w-full max-w-xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-6 sm:p-10 relative overflow-hidden">
+        
+        <!-- 1. Landing / Welcome Screen -->
+        <section id="welcome-screen" class="text-center space-y-8 fade-in py-2">
+            
+            <!-- Title with Orange Highlighting -->
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-100 leading-tight">
+                Which <span class="text-orange-500">Intellectual Property</span> Right are You?
+            </h1>
 
-      <h1>What’s Your IP Archetype?</h1>
-      <p>
-        Navigate 9 high-stakes scenarios from IP Week 2026 and reveal whether you're an Uncompromising Architect, a Brand Titan, or a Secret Vault Keeper.
-      </p>
-      <button class="primary-btn" onclick="startQuiz()">Start Quiz</button>
-    </section>
+            <!-- 4x2 Visual Icon Grid -->
+            <div class="p-1 rounded-2xl bg-gradient-to-r from-blue-600/40 via-slate-700/50 to-orange-500/40 shadow-2xl">
+                <div class="bg-slate-950/90 rounded-xl p-4 sm:p-6 grid grid-cols-4 gap-3 sm:gap-4 border border-slate-800">
+                    
+                    <!-- 1. Trademark (TM) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 9h3m-1.5 0v6M13.5 15V9l2.25 3.75L18 9v6"/>
+                        </svg>
+                    </div>
 
-    <!-- 2. Active Quiz View -->
-    <section id="quiz-container" style="display: none;">
-      <div id="progress-header">
-        <span>Question <span id="current-q-num">1</span> of <span id="total-q-num">9</span></span>
-      </div>
-      <div class="progress-bar-track">
-        <div id="progress-bar-fill" class="progress-bar-fill"></div>
-      </div>
+                    <!-- 2. Patent (Mechanical Blueprint) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path stroke-linecap="round" d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
 
-      <h2 id="question-text">Loading question...</h2>
-      <div id="options-container"></div>
-    </section>
+                    <!-- 3. Copyright (Pen on Document) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
+                        </svg>
+                    </div>
 
-    <!-- 3. Results View -->
-    <section id="results-container" style="display: none;">
-      <h1 id="result-title"></h1>
-      <p id="result-vibe"></p>
-      
-      <p id="result-description"></p>
+                    <!-- 4. Trade Secret (Padlock) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+                        </svg>
+                    </div>
 
-      <div class="result-details">
-        <p><strong>Biggest Strength:</strong> <span id="result-strength"></span></p>
-        <p><strong>Biggest Weakness:</strong> <span id="result-weakness"></span></p>
-        <p><strong>Motto:</strong> <span id="result-motto"></span></p>
-      </div>
+                    <!-- 5. Registered Design (Contour Lines) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 2h4m-3 0v3c0 1.5-1.5 2.5-1.5 4.5 0 3 1.5 4 1.5 7.5V22h2v-5c0-3.5 1.5-4.5 1.5-7.5 0-2-1.5-3-1.5-4.5V2"/>
+                        </svg>
+                    </div>
 
-      <button class="primary-btn" onclick="restartQuiz()">Retake Quiz</button>
-    </section>
-  </main>
+                    <!-- 6. Geographical Indication (GPS Pin) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                        </svg>
+                    </div>
 
-  <script src="app.js"></script>
+                    <!-- 7. Plant Variety Protection (Sprout/Plant) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V11m0 0C9.5 7 5 6.5 5 10c0 3 4 5 7 1m0 0c2.5-4 7-4.5 7-1 0 3-4 5-7 1m-3 10c-3-1-5-4-2-6m8 6c3-1 5-4 2-6"/>
+                        </svg>
+                    </div>
+
+                    <!-- 8. Public Domain / Circuit Architecture -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <rect x="7" y="7" width="10" height="10" rx="2"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/>
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="pt-2">
+                <button id="start-btn" onclick="startQuiz()" class="w-full sm:w-auto bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold text-lg px-10 py-3.5 rounded-xl transition-all duration-200 shadow-lg shadow-orange-500/20 hover:scale-[1.02] active:scale-[0.98]">
+                    Make Your Mark
+                </button>
+            </div>
+
+        </section>
+
+        <!-- 2. Quiz Screen -->
+        <section id="quiz-screen" class="hidden space-y-6">
+            <!-- Progress Tracker -->
+            <div class="space-y-2">
+                <div class="flex justify-between text-xs font-medium text-slate-400">
+                    <span id="question-indicator">Question <span id="current-q-num">1</span> of <span id="total-q-num">9</span></span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div id="progress-bar-fill" class="bg-orange-500 h-full w-0 transition-all duration-300 ease-out"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div id="question-card" class="fade-in space-y-6 pt-2">
+                <h2 id="question-text" class="text-xl sm:text-2xl font-semibold text-slate-100 leading-snug"></h2>
+                <div id="options-container" class="space-y-3"></div>
+            </div>
+        </section>
+
+        <!-- 3. Results Screen -->
+        <section id="result-screen" class="hidden text-left space-y-6 fade-in">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-semibold tracking-widest text-orange-400 uppercase bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">Your IP Archetype</span>
+                <h2 id="result-title" class="text-3xl sm:text-4xl font-bold text-slate-100"></h2>
+            </div>
+            
+            <p id="result-vibe" class="text-orange-400 italic text-center font-medium text-lg leading-snug"></p>
+
+            <p id="result-description" class="text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-950/60 p-5 rounded-xl border border-slate-800"></p>
+
+            <div class="bg-slate-950/80 p-5 rounded-xl border-l-4 border-orange-500 space-y-3 text-sm sm:text-base">
+                <p class="text-slate-200"><strong>Biggest Strength:</strong> <span id="result-strength" class="text-slate-300"></span></p>
+                <p class="text-slate-200"><strong>Biggest Weakness:</strong> <span id="result-weakness" class="text-slate-300"></span></p>
+                <p class="text-slate-200"><strong>Motto:</strong> <span id="result-motto" class="text-orange-300 italic"></span></p>
+            </div>
+            
+            <button onclick="restartQuiz()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3.5 rounded-xl transition-all duration-200">
+                Retake Quiz
+            </button>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
