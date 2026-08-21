@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personality Quiz</title>
+    <title>Intellectual Property Personality Diagnostic</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,18 +16,98 @@
         }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4">
 
-    <main class="w-full max-w-xl bg-slate-800 border border-slate-700/60 rounded-2xl shadow-2xl p-6 sm:p-10 relative overflow-hidden">
+    <main class="w-full max-w-xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-6 sm:p-10 relative overflow-hidden">
         
-        <!-- Welcome Screen -->
-        <section id="welcome-screen" class="text-center space-y-6 fade-in">
-            <span id="quiz-tag" class="text-xs font-semibold tracking-widest text-indigo-400 uppercase bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Discovery Assessment</span>
-            <h1 id="quiz-title" class="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-2">Loading Quiz...</h1>
-            <p id="quiz-desc" class="text-slate-400 text-sm sm:text-base max-w-md mx-auto leading-relaxed"></p>
-            <button id="start-btn" onclick="startQuiz()" class="hidden w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-200 shadow-lg shadow-indigo-600/30 hover:scale-[1.02] active:scale-[0.98]">
-                Begin Quiz
-            </button>
+        <!-- Landing / Welcome Screen -->
+        <section id="welcome-screen" class="text-center space-y-8 fade-in py-2">
+            
+            <!-- Title with requested color highlighting -->
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-100 leading-tight">
+                Which <span class="text-orange-500">Intellectual Property</span> Right are You?
+            </h1>
+
+            <!-- 4x2 Mysterious Icon Grid -->
+            <div class="p-1 rounded-2xl bg-gradient-to-r from-blue-600/40 via-slate-700/50 to-orange-500/40 shadow-2xl">
+                <div class="bg-slate-950/90 rounded-xl p-4 sm:p-6 grid grid-cols-4 gap-3 sm:gap-4 border border-slate-800">
+                    
+                    <!-- 1. Trademark (TM) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 9h3m-1.5 0v6M13.5 15V9l2.25 3.75L18 9v6"/>
+                        </svg>
+                    </div>
+
+                    <!-- 2. Patent (Mechanical Blueprint) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path stroke-linecap="round" d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+
+                    <!-- 3. Copyright (Pen on Document) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
+                        </svg>
+                    </div>
+
+                    <!-- 4. Trade Secret (Padlock) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+                        </svg>
+                    </div>
+
+                    <!-- 5. Industrial Design (Contour Bottle Line Art) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 2h4m-3 0v3c0 1.5-1.5 2.5-1.5 4.5 0 3 1.5 4 1.5 7.5V22h2v-5c0-3.5 1.5-4.5 1.5-7.5 0-2-1.5-3-1.5-4.5V2"/>
+                        </svg>
+                    </div>
+
+                    <!-- 6. Geographical Indication (GPS Pin over Landscape) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                        </svg>
+                    </div>
+
+                    <!-- 7. Plant Varieties (Orchid / Botanical Line Art) -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-orange-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V11m0 0C9.5 7 5 6.5 5 10c0 3 4 5 7 1m0 0c2.5-4 7-4.5 7-1 0 3-4 5-7 1m-3 10c-3-1-5-4-2-6m8 6c3-1 5-4 2-6"/>
+                        </svg>
+                    </div>
+
+                    <!-- 8. Layout Design / Circuit Line Art -->
+                    <div class="aspect-square bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-3 hover:border-blue-500/60 transition-colors group">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-slate-300 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                            <rect x="7" y="7" width="10" height="10" rx="2"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/>
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-3 pt-2">
+                <button id="start-btn" onclick="startQuiz()" class="w-full sm:w-auto bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold text-lg px-10 py-3.5 rounded-xl transition-all duration-200 shadow-lg shadow-orange-500/20 hover:scale-[1.02] active:scale-[0.98]">
+                    Make Your Mark
+                </button>
+
+                <div>
+                    <a href="#explore" onclick="alert('Feature coming soon!')" class="inline-block text-xs sm:text-sm text-slate-400 hover:text-blue-400 italic underline decoration-slate-700 underline-offset-4 transition-colors">
+                        Explore the IP types
+                    </a>
+                </div>
+            </div>
+
         </section>
 
         <!-- Quiz Screen -->
@@ -38,25 +118,25 @@
                     <span id="question-indicator">Question 1</span>
                     <span id="progress-percent">0%</span>
                 </div>
-                <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
-                    <div id="progress-bar" class="bg-indigo-500 h-full w-0 transition-all duration-300 ease-out"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="bg-orange-500 h-full w-0 transition-all duration-300 ease-out"></div>
                 </div>
             </div>
 
             <!-- Question Card -->
             <div id="question-card" class="fade-in space-y-6 pt-2">
-                <h2 id="question-text" class="text-xl sm:text-2xl font-semibold text-white leading-snug"></h2>
+                <h2 id="question-text" class="text-xl sm:text-2xl font-semibold text-slate-100 leading-snug"></h2>
                 <div id="options-container" class="space-y-3"></div>
             </div>
         </section>
 
         <!-- Results Screen -->
         <section id="result-screen" class="hidden text-center space-y-6 fade-in">
-            <span class="text-xs font-semibold tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Your Match Result</span>
-            <h2 id="result-title" class="text-3xl sm:text-4xl font-bold text-white"></h2>
-            <p id="result-desc" class="text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 text-left"></p>
+            <span class="text-xs font-semibold tracking-widest text-orange-400 uppercase bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">Your Match Result</span>
+            <h2 id="result-title" class="text-3xl sm:text-4xl font-bold text-slate-100"></h2>
+            <p id="result-desc" class="text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-950/60 p-5 rounded-xl border border-slate-800 text-left"></p>
             
-            <button onclick="restartQuiz()" class="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 rounded-xl transition-all duration-200">
+            <button onclick="restartQuiz()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 rounded-xl transition-all duration-200">
                 Retake Quiz
             </button>
         </section>
