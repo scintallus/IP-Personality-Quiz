@@ -1,49 +1,158 @@
-
 {
-  "title": "What Is Your Work Style Archetype?",
-  "description": "Answer 4 simple questions to discover how you naturally process problems, organize tasks, and execute ideas.",
+  "title": "What's Your Intellectual Property Personality?",
+  "description": "Every venture creates something worth stealing. Answer 5 quick questions to discover whether your business asset needs a patent, a trademark, a copyright, a trade secret, or a registered design before someone else monetizes your genius.",
   "questions": [
     {
       "id": 1,
-      "text": "When handed an ambiguous project, what is your first impulse?",
+      "text": "You've spent six months fueled by cold brew and existential dread building something new. What is it, exactly?",
       "options": [
-        { "label": "Brainstorm wild concepts without setting constraints.", "weights": { "architect": 3, "analyst": 0 } },
-        { "label": "Map out a granular timeline and break down sub-tasks.", "weights": { "architect": 0, "analyst": 3 } }
+        {
+          "label": "A game-changing gadget with actual moving parts, gizmos, and a clever technical mechanism.",
+          "weights": { "patent": 3, "trademark": 0, "copyright": 0, "trade_secret": 1, "design": 1 }
+        },
+        {
+          "label": "A incredibly catchy brand name, snappy slogan, and a logo so crisp it makes designers weep.",
+          "weights": { "patent": 0, "trademark": 3, "copyright": 1, "trade_secret": 0, "design": 0 }
+        },
+        {
+          "label": "A masterwork of written content, source code, musical score, or sleek digital illustration.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 3, "trade_secret": 0, "design": 1 }
+        },
+        {
+          "label": "A proprietary algorithm or secret recipe that works like absolute magic—so long as no one sees the source code.",
+          "weights": { "patent": 1, "trademark": 0, "copyright": 0, "trade_secret": 3, "design": 0 }
+        },
+        {
+          "label": "A stunning physical product shape. It doesn't split the atom, but it looks gorgeous on a shelf.",
+          "weights": { "patent": 1, "trademark": 0, "copyright": 0, "trade_secret": 0, "design": 3 }
+        }
       ]
     },
     {
       "id": 2,
-      "text": "How do you prefer to present recommendations to a group?",
+      "text": "A rival firm hires an investigator to figure out what you're up to. What do they discover?",
       "options": [
-        { "label": "Focus on high-level narrative, vision, and possibilities.", "weights": { "architect": 3, "analyst": 0 } },
-        { "label": "Provide rigorous data points, metrics, and risk assessments.", "weights": { "architect": 0, "analyst": 3 } }
+        {
+          "label": "A complex blueprint of functional innovation that breaks the laws of standard industry practice.",
+          "weights": { "patent": 3, "trademark": 0, "copyright": 0, "trade_secret": 1, "design": 0 }
+        },
+        {
+          "label": "Customers buying from us purely because our name and visual identity mean quality and prestige.",
+          "weights": { "patent": 0, "trademark": 3, "copyright": 0, "trade_secret": 0, "design": 1 }
+        },
+        {
+          "label": "An extensive vault of original expressions, manuals, codebases, or media assets.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 3, "trade_secret": 0, "design": 0 }
+        },
+        {
+          "label": "Nothing. The key knowledge is locked in a vault, split between two executives who aren't allowed on the same flight.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 0, "trade_secret": 3, "design": 0 }
+        },
+        {
+          "label": "An iconic silhouette and ergonomic form factor that people instantly recognize across a crowded room.",
+          "weights": { "patent": 0, "trademark": 1, "copyright": 0, "trade_secret": 0, "design": 3 }
+        }
       ]
     },
     {
       "id": 3,
-      "text": "What causes you the most frustration during a workflow?",
+      "text": "What is your absolute worst nightmare scenario for this business venture?",
       "options": [
-        { "label": "Rigid processes that restrict experimentation.", "weights": { "architect": 3, "analyst": 0 } },
-        { "label": "Lack of documentation and moving goalposts.", "weights": { "architect": 0, "analyst": 3 } }
+        {
+          "label": "A competitor copying our technical process and building a functional knockoff.",
+          "weights": { "patent": 3, "trademark": 0, "copyright": 0, "trade_secret": 1, "design": 0 }
+        },
+        {
+          "label": "A dodgy competitor setting up shop using a confusingly similar name to leech off our goodwill.",
+          "weights": { "patent": 0, "trademark": 3, "copyright": 0, "trade_secret": 0, "design": 1 }
+        },
+        {
+          "label": "Someone copy-pasting our entire manuscript, code repository, or artwork and passing it off as theirs.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 3, "trade_secret": 1, "design": 0 }
+        },
+        {
+          "label": "A disgruntled former employee leaking our secret sauce or client database to Reddit.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 0, "trade_secret": 3, "design": 0 }
+        },
+        {
+          "label": "A fast-fashion or low-cost manufacturer cloning the exact visual contours of our flagship product.",
+          "weights": { "patent": 1, "trademark": 0, "copyright": 0, "trade_secret": 0, "design": 3 }
+        }
       ]
     },
     {
       "id": 4,
-      "text": "Which environment brings out your absolute best output?",
+      "text": "How do you plan to extract cold, hard cash from this creation?",
       "options": [
-        { "label": "A blank canvas with room for big-picture strategy.", "weights": { "architect": 3, "analyst": 0 } },
-        { "label": "A structured problem space requiring optimization and precision.", "weights": { "architect": 0, "analyst": 3 } }
+        {
+          "label": "Licensing our technical breakthrough to major industry players who can't engineer around us.",
+          "weights": { "patent": 3, "trademark": 0, "copyright": 0, "trade_secret": 1, "design": 0 }
+        },
+        {
+          "label": "Building brand equity so strong that customers pay a premium just for the logo on the box.",
+          "weights": { "patent": 0, "trademark": 3, "copyright": 0, "trade_secret": 0, "design": 1 }
+        },
+        {
+          "label": "Distributing original creative works, software subscriptions, or media publications far and wide.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 3, "trade_secret": 0, "design": 0 }
+        },
+        {
+          "label": "Compounding our competitive advantage indefinitely while keeping the underlying magic behind closed doors.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 0, "trade_secret": 3, "design": 0 }
+        },
+        {
+          "label": "Dominating retail shelves because our product looks sleeker and more distinctive than anything else.",
+          "weights": { "patent": 0, "trademark": 1, "copyright": 0, "trade_secret": 0, "design": 3 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "If your IP asset was a historical artifact or public figure, what would it be?",
+      "options": [
+        {
+          "label": "Thomas Edison's lightbulb patent—a utility masterpiece that changed how the world functions.",
+          "weights": { "patent": 3, "trademark": 0, "copyright": 0, "trade_secret": 0, "design": 0 }
+        },
+        {
+          "label": "The Nike Swoosh or Coca-Cola script—instantly recognizable across every continent.",
+          "weights": { "patent": 0, "trademark": 3, "copyright": 0, "trade_secret": 0, "design": 1 }
+        },
+        {
+          "label": "The complete works of Shakespeare—original expression preserved and protected in ink.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 3, "trade_secret": 0, "design": 0 }
+        },
+        {
+          "label": "The vault-locked formula for Chartreuse liqueur—known only to two monks who will never tell.",
+          "weights": { "patent": 0, "trademark": 0, "copyright": 0, "trade_secret": 3, "design": 0 }
+        },
+        {
+          "label": "The iconic Coke bottle contour or the Coca-Cola curve—pure aesthetic genius.",
+          "weights": { "patent": 0, "trademark": 1, "copyright": 0, "trade_secret": 0, "design": 3 }
+        }
       ]
     }
   ],
   "results": {
-    "architect": {
-      "title": "The Strategic Architect",
-      "description": "You operate best at 30,000 feet. You synthesize abstract concepts quickly, spot macro patterns before others do, and excel at charting direction where clear roadmaps don't yet exist."
+    "patent": {
+      "title": "The Tech Innovator (Patent Candidate)",
+      "description": "You've invented a functional gadget, process, or technical mechanism that solves a real-world problem. A Patent grants you a legal monopoly to stop others from making, using, or selling your invention for up to 20 years. **Business Benefit:** Massive barrier to entry against competitors and high valuation for investors. **Hazard to Avoid:** Disclosing your invention publicly before filing your application—public exposure can instantly destroy your patentability!"
     },
-    "analyst": {
-      "title": "The Systematic Analyst",
-      "description": "You are a master of execution and structural precision. You turn chaos into order, spot critical operational flaws, and ensure plans are backed by verifiable logic and structure."
+    "trademark": {
+      "title": "The Brand Mastermind (Trademark Candidate)",
+      "description": "Your core value lies in your brand identity—your business name, logo, catchphrase, or visual badge that tells customers 'accept no imitations.' A Trademark secures your exclusive right to use that identifier in commerce. **Business Benefit:** Build undefendable customer trust and enterprise goodwill that lasts indefinitely (so long as you renew it). **Hazard to Avoid:** Picking a generic or descriptive name that the registry rejects."
+    },
+    "copyright": {
+      "title": "The Creative Expressor (Copyright Candidate)",
+      "description": "Your asset is an original expression—software source code, written guides, video content, illustrations, or architectural layouts. Copyright automatically protects your original work from being copied, stolen, or redistributed the moment it's created. **Business Benefit:** Zero registration required for basic protection, granting you exclusive reproduction and licensing rights. **Hazard to Avoid:** Thinking copyright protects your underlying *ideas*—it only protects the exact *expression* of those ideas."
+    },
+    "trade_secret": {
+      "title": "The Vault Keeper (Trade Secret Candidate)",
+      "description": "Your secret sauce is a proprietary formula, source algorithm, or confidential client list that gives you a sharp edge over competitors. Trade Secret protection lasts as long as the information remains confidential. **Business Benefit:** No public disclosure required, no government filing fees, and protection never expires. **Hazard to Avoid:** Failing to enforce strict NDAs, access controls, and employment security protocols—if the secret leaks publicly, the protection vanishes forever!"
+    },
+    "design": {
+      "title": "The Aesthetic Perfectionist (Registered Design Candidate)",
+      "description": "Your competitive edge is how your product *looks*—its 3D shape, visual contours, patterns, or surface ornamentation. A Registered Design protects the unique visual appearance of an industrial or consumer object. **Business Benefit:** Stops low-cost knockoffs from stealing your product's signature look. **Hazard to Avoid:** Confusing visual design with technical function—registered designs cover form, not how the underlying machine works!"
     }
   }
 }
