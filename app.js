@@ -1,4 +1,4 @@
-// 1. App State & Score Tally
+// 1. App State
 let questionsData = [];
 let currentQuestionIndex = 0;
 
@@ -81,19 +81,28 @@ const resultProfiles = {
   }
 };
 
-// 3. Initialize Quiz by Fetching questions.json
-async function initQuiz() {
+// 3. Start Quiz Function
+async function startQuiz() {
   try {
-    const response = await fetch("questions.json");
-    questionsData = await response.json();
+    if (questionsData.length === 0) {
+      const response = await fetch("questions.json");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      questionsData = await response.json();
+    }
+    
+    document.getElementById("welcome-screen").classList.add("hidden");
+    document.getElementById("quiz-screen").classList.remove("hidden");
+    
     renderQuestion();
   } catch (error) {
     console.error("Error loading questions.json:", error);
-    document.getElementById("question-text").innerText = "Failed to load quiz data.";
+    alert("Unable to load questions. Ensure questions.json is present in the root folder.");
   }
 }
 
-// 4. Render Active Question
+// 4. Render Current Question
 function renderQuestion() {
   const currentQ = questionsData[currentQuestionIndex];
 
@@ -101,19 +110,24 @@ function renderQuestion() {
   document.getElementById("total-q-num").innerText = questionsData.length;
   document.getElementById("question-text").innerText = currentQ.text;
 
+  // Calculate & Update Progress Bar Percentage
+  const progressPercent = Math.round(((currentQuestionIndex + 1) / questionsData.length) * 100);
+  document.getElementById("progress-percent").innerText = `${progressPercent}%`;
+  document.getElementById("progress-bar-fill").style.width = `${progressPercent}%`;
+
   const optionsContainer = document.getElementById("options-container");
   optionsContainer.innerHTML = "";
 
   currentQ.options.forEach(option => {
     const btn = document.createElement("button");
-    btn.className = "option-btn";
-    btn.innerText = option.label;
+    btn.className = "w-full text-left bg-slate-900 hover:bg-slate-800/80 border border-slate-800 hover:border-orange-500/60 text-slate-200 p-4 rounded-xl transition-all duration-200 group";
+    btn.innerHTML = `<span class="group-hover:text-orange-400 transition-colors">${option.label}</span>`;
     btn.onclick = () => selectOption(option.weights);
     optionsContainer.appendChild(btn);
   });
 }
 
-// 5. Option Selection & Score Tallying Logic
+// 5. Option Selection Logic
 function selectOption(weights) {
   for (const [category, points] of Object.entries(weights)) {
     if (scores.hasOwnProperty(category)) {
@@ -130,20 +144,17 @@ function selectOption(weights) {
   }
 }
 
-// 6. Calculate Winner & Show Results View
+// 6. Calculate & Display Winning Profile
 function calculateAndShowResult() {
-  // Find category with highest score
   const winningCategory = Object.keys(scores).reduce((a, b) =>
     scores[a] > scores[b] ? a : b
   );
 
   const result = resultProfiles[winningCategory];
 
-  // Hide Quiz Container, Show Results Container
-  document.getElementById("quiz-container").style.display = "none";
-  document.getElementById("results-container").style.display = "block";
+  document.getElementById("quiz-screen").classList.add("hidden");
+  document.getElementById("result-screen").classList.remove("hidden");
 
-  // Populate Result View Elements
   document.getElementById("result-title").innerText = result.title;
   document.getElementById("result-vibe").innerText = `"${result.vibe}"`;
   document.getElementById("result-description").innerText = result.description;
@@ -152,16 +163,20 @@ function calculateAndShowResult() {
   document.getElementById("result-motto").innerText = `"${result.motto}"`;
 }
 
-// 7. Reset Quiz
+// 7. Restart Quiz
 function restartQuiz() {
   currentQuestionIndex = 0;
   for (let cat in scores) {
     scores[cat] = 0;
   }
-  document.getElementById("results-container").style.display = "none";
-  document.getElementById("quiz-container").style.display = "block";
-  renderQuestion();
+  document.getElementById("result-screen").classList.add("hidden");
+  document.getElementById("welcome-screen").classList.remove("hidden");
 }
 
-// Run on page load
-window.onload = initQuiz;
+// Attach event listener safely once DOM loads
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("start-btn");
+  if (startBtn) {
+    startBtn.addEventListener("click", startQuiz);
+  }
+});
