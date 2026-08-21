@@ -4,7 +4,7 @@
     "text": "You have one free hour at the IP Week 2026 Marketplace. Where do you go first?",
     "options": [
       {
-        "label": "The booth using cutting-edge quantum fluid dynamics to predict which line at the supermarket cashier will move the fastest.",
+        "label": "The booth using quantum fluid dynamics to predict which line at the supermarket cashier will move the fastest.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
@@ -12,29 +12,29 @@
         "weights": { "trademark": 3, "design": 1 }
       },
       {
-        "label": "The interactive installation that makes you stop, watch and immediately share it over social media.",
+        "label": "The flashy installation that was designed for social media.",
         "weights": { "copyright": 3, "design": 1 }
       },
       {
-        "label": "The booth featuring an industrial drill bit exquisitely wrapped in hand-stitched Corinthian leather.",
+        "label": "The booth with exquisitely designed products.",
         "weights": { "design": 3 }
       }
     ]
   },
   {
     "id": 2,
-    "text": "Your team has invented a NFC-enabled hawker-table booking system. What do you do next?",
+    "text": "Your team has invented a hawker-table booking system. What do you do next?",
     "options": [
       {
-        "label": "Before the champagne-popping/yacht-purchasing, we do some proper research to make sure no one else has got there first.",
+        "label": "Before the yacht-purchasing, do some proper research to make sure no one else has got there first.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
-        "label": "The world is not ready for the massive societal upheaval this will cause. We keep it exclusively for use in our staff canteen.",
+        "label": "The world is not ready for this. We keep it exclusively for use in our staff canteen.",
         "weights": { "trade_secret": 3 }
       },
       {
-        "label": "The priority is to brainstorm a catchy name for it before somebody defaults to 'Project Final FINAL_2'.",
+        "label": "Brainstorm a catchy name for it before somebody defaults to 'Project Final FINAL_2'.",
         "weights": { "trademark": 3 }
       },
       {
@@ -48,11 +48,11 @@
     "text": "Your primary competitor launches something that looks uncomfortably familiar to your product. What bothers you most?",
     "options": [
       {
-        "label": "They have reproduced your top-secret mechanical thingamajig, despite your assurances to investors that no one else would be able to.",
-        "weights": { "patent": 3, "trade_secret": 1 }
+        "label": "They stole the idea for our top-secret thingamajig!",
+        "weights": { "trade_secret": 3, "patent": 1 }
       },
       {
-        "label": "Customers are getting confused (as customers do), despite our 47-page technical analysis painstakingly explaining the differences.",
+        "label": "Customers are getting confused (as customers do).",
         "weights": { "trademark": 3 }
       },
       {
@@ -60,7 +60,7 @@
         "weights": { "copyright": 3, "trademark": 1 }
       },
       {
-        "label": "They have replicated a process documented only in a document title 'STRICTLY CONFIDENTIAL - DO NOT CIRCULATE (Secret Process).pdf' (which was circulated extensively).",
+        "label": "Their invention isn't even new! My nephew made that his art and crafts class!",
         "weights": { "trade_secret": 3, "patent": 1 }
       }
     ]
@@ -70,7 +70,7 @@
     "text": "A venture capitalist asks what makes your enterprise commercially unique. What do you lead with?",
     "options": [
       {
-        "label": "Our technical process, developed at the cost of several million dollars and the general mental wellbeing of the R&D team.",
+        "label": "Our technical processes.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
@@ -89,10 +89,10 @@
   },
   {
     "id": 5,
-    "text": "Your organisation develops a premium new coffee plant variety. What is the grand commercial plan?",
+    "text": "Your company develops a premium new coffee plant variety. What is the commercial plan?",
     "options": [
       {
-        "label": "A marketing campaign around the obscure misty hillside where the plant originates.",
+        "label": "A marketing campaign around the misty hillside where the plant originates.",
         "weights": { "geographical_indication": 3, "copyright": 1 }
       },
       {
@@ -100,7 +100,7 @@
         "weights": { "plant_variety": 3, "geographical_indication": 1 }
       },
       {
-        "label": "We greenlight a multi-movie cinematic franchise in which our coffee bean leads an underground rebellion against Instant Coffee.",
+        "label": "Creativity! A multi-movie cinematic franchise starring your coffee bean.",
         "weights": { "copyright": 3, "plant_variety": 1 }
       },
       {
@@ -122,11 +122,11 @@
         "weights": { "geographical_indication": 3, "trademark": 1 }
       },
       {
-        "label": "The visual profile for your lifestyle product more closely resembles agricultural machinery.",
+        "label": "Your lifestyle product isn't Instagrammable enough.",
         "weights": { "design": 3, "trademark": 1 }
       },
       {
-        "label": "The lion's share of the budget was spent on commissioning an original 40-second orchestral symphony that plays whenever the app opens. This has left very little money to address how frequently it crashes.",
+        "label": "You spent too much on commissioning an original orchestral symphony that plays whenever the app opens. This has left very little money to address how frequently it crashes.",
         "weights": { "copyright": 3, "trademark": 1 }
       }
     ]
@@ -136,11 +136,11 @@
     "text": "You have been in product development for five years and still aren't ready to go to market. What keeps you going?",
     "options": [
       {
-        "label": "Your products finally work consistently without the engineering team whispering words of encouragement.",
+        "label": "Consistent growth. Your products finally work without the engineering team whispering words of encouragement.",
         "weights": { "plant_variety": 3, "patent": 1 }
       },
       {
-        "label": "We finally proved our mechanism doesn't infringe on a patented steam-powered sausage press.",
+        "label": "Competition. We finally proved our invention doesn't infringe a competitor's.",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
@@ -148,7 +148,7 @@
         "weights": { "trade_secret": 3, "patent": 1 }
       },
       {
-        "label": "You forge on in the knowledge that your work will become the foundation for the next generation.",
+        "label": "Charity. You forge on in the knowledge that your work will become the foundation for the next generation.",
         "weights": { "public_domain": 3, "copyright": 1 }
       }
     ]
@@ -162,11 +162,11 @@
         "weights": { "copyright": 3, "trademark": 1 }
       },
       {
-        "label": "The prototype looks great from the front, but the exhibition booth permits visitors to walk around it.",
+        "label": "The prototype looks great from the front, but the booth permits visitors to walk around it.",
         "weights": { "design": 3, "trademark": 1 }
       },
       {
-        "label": "The audience may clap during the presentation but forget your company's name after leaving the auditorium.",
+        "label": "The audience may clap during the presentation but forget your company's name after leaving.",
         "weights": { "trademark": 3, "design": 1 }
       },
       {
@@ -180,7 +180,7 @@
     "text": "Your business is ready to expand overseas. What is the first strategic question you think should be addressed?",
     "options": [
       {
-        "label": "How many foreign jurisdictions can we afford to ring-fence before the filing fees surpass our company's valuation?",
+        "label": "How many foreign markets can we afford to dive into?",
         "weights": { "patent": 3, "trade_secret": 1 }
       },
       {
@@ -192,7 +192,7 @@
         "weights": { "plant_variety": 3, "geographical_indication": 1 }
       },
       {
-        "label": "If we gift the underlying design to the world, can we trick the entire industry into adopting it as the mandatory global standard?",
+        "label": "If we make the underlying design free, can we trick the entire industry into adopting it as the global standard?",
         "weights": { "public_domain": 3, "copyright": 1 }
       }
     ]
