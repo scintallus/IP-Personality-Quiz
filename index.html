@@ -6,13 +6,14 @@
   <title>IP Week 2026 Personality Quiz</title>
   <style>
     :root {
-      --bg-color: #0b132b;        /* Dark Navy */
+      --bg-color: #0b132b;        /* Dark Navy Body Background */
       --card-bg: #1c2541;       /* Deep Navy Card */
       --text-color: #edf2f4;     /* Crisp Light Text */
       --subtext-color: #8d99ae;  /* Muted Slate */
       --accent-color: #f77f00;   /* Vibrant IP Orange */
       --accent-hover: #d66800;   /* Deep Orange Hover */
       --border-color: #3a506b;   /* Slate Border */
+      --glow-color: rgba(247, 127, 0, 0.4); /* Subtle Orange Glow */
     }
 
     body {
@@ -32,7 +33,7 @@
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       max-width: 650px;
       width: 100%;
       padding: 36px;
@@ -66,15 +67,36 @@
       margin-bottom: 28px;
     }
 
-    /* Progress Indicator */
-    #progress {
+    /* Progress Header & Bar */
+    #progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--accent-color);
-      margin-bottom: 16px;
-      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar-track {
+      width: 100%;
+      height: 8px;
+      background-color: #0b132b;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background-color: var(--accent-color);
+      border-radius: 4px;
+      transition: width 0.3s ease-in-out;
+      box-shadow: 0 0 8px var(--accent-color);
     }
 
     /* Question Typography */
@@ -96,7 +118,7 @@
 
     .option-btn {
       background-color: #0b132b;
-      border: 1px solid var(--border-color);
+      border: 1.5px solid var(--border-color);
       border-radius: 10px;
       padding: 16px;
       font-size: 1rem;
@@ -104,12 +126,14 @@
       text-align: left;
       color: var(--text-color);
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.2s ease-in-out;
     }
 
+    /* Orange Glow Highlight on Hover */
     .option-btn:hover {
-      background-color: #3a506b;
+      background-color: #121e42;
       border-color: var(--accent-color);
+      box-shadow: 0 0 12px var(--glow-color);
       transform: translateY(-2px);
     }
 
@@ -170,11 +194,12 @@
       font-weight: 700;
       cursor: pointer;
       width: 100%;
-      transition: background-color 0.2s ease, transform 0.1s ease;
+      transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
     }
 
     .primary-btn:hover {
       background-color: var(--accent-hover);
+      box-shadow: 0 0 12px var(--glow-color);
       transform: translateY(-1px);
     }
   </style>
@@ -184,7 +209,6 @@
   <main id="app-container">
     <!-- 1. Landing View -->
     <section id="landing-container">
-      <!-- Abstract IP Graphic Artwork -->
       <svg class="hero-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="100" r="80" stroke="#3a506b" stroke-width="4" stroke-dasharray="8 6"/>
         <path d="M60 100 L100 60 L140 100 L100 140 Z" stroke="#f77f00" stroke-width="5" stroke-linejoin="round"/>
@@ -204,9 +228,13 @@
 
     <!-- 2. Active Quiz View -->
     <section id="quiz-container" style="display: none;">
-      <div id="progress">
-        Question <span id="current-q-num">1</span> of <span id="total-q-num">9</span>
+      <div id="progress-header">
+        <span>Question <span id="current-q-num">1</span> of <span id="total-q-num">9</span></span>
       </div>
+      <div class="progress-bar-track">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+
       <h2 id="question-text">Loading question...</h2>
       <div id="options-container"></div>
     </section>
