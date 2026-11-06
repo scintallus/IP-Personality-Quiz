@@ -80,6 +80,7 @@ const resultProfiles = {
   },
   public_domain: {
     title: "Public Domain ⚖️",
+    image: "assets/PD Final.jpg",
     vibe: "You are the ultimate collaborator who builds for the collective commons.",
     description: "You believe that knowledge, foundational research, and core standards achieve their highest value when freely shared. Generous with your work, you prefer to give ideas to the world so that others can build upon them. You are far less concerned with claiming personal ownership than with leaving a lasting global impact.",
     strength: "Openness, generosity, and community-building.",
@@ -168,6 +169,14 @@ function calculateAndShowResult() {
   document.getElementById("result-strength").innerText = result.strength;
   document.getElementById("result-weakness").innerText = result.weakness;
   document.getElementById("result-motto").innerText = `"${result.motto}"`;
+
+  const imgElement = document.getElementById("result-image");
+  if (imgElement && result.image) {
+    imgElement.src = result.image;
+    imgElement.alt = result.title;
+
+  document.getElementById("quiz-screen").classList.add("hidden");
+  document.getElementById("result-screen").classList.remove("hidden");
 }
 
 // 7. Restart Quiz
