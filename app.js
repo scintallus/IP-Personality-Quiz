@@ -16,16 +16,16 @@ let scores = {
 // 2. Result Profiles Dictionary
 const resultProfiles = {
   patent: {
-    title: "Patent 🧠",
+    title: "Patent",
     image: "Patents%20Final.jpg",
     vibe: "You love fixing problems that nobody else has cracked—and finding problems nobody else knew existed.",
     description: "You are analytical, inventive, and relentlessly utility-focused. You care very little for the superficial matters of the world; you are results-oriented and entirely unashamed of it. People bring you impossible technical challenges because they know you will obsess until you find a way around them.",
     strength: "Practical innovation and technical problem-solving.",
     weakness: "Over-engineering simple tasks and occasionally reinventing the wheel out of sheer academic stubbornness.",
-    motto: "If it doesn't exist yet, I'll build it."
+    motto: "If it does not exist yet, I will build it."
   },
   trademark: {
-    title: "Trademark ™",
+    title: "Trademark",
     image: "TM%20Final.jpg",
     vibe: "You understand that a reputation takes years to build and one social media post to destroy.",
     description: "People remember you instantly. Whether it is your signature style, your catchphrases, or your unwavering flair, you have cultivated a brand identity that stands out in a crowded market. You know that functionality is fleeting, but a trusted name and a clear visual identity endure forever.",
@@ -34,7 +34,7 @@ const resultProfiles = {
     motto: "Your name is your single greatest asset."
   },
   copyright: {
-    title: "Copyright ©",
+    title: "Copyright",
     image: "Copyright%20Final.jpg",
     vibe: "You believe original expression deserves respect, recognition, and royalties.",
     description: "You are the creative soul of the enterprise. You express yourself through words, code, visual art, musical compositions, and elaborate slide decks. Originality matters deeply to you; you view imitation as sheer laziness and look down on those afflicted with a severe lack of imagination.",
@@ -43,16 +43,16 @@ const resultProfiles = {
     motto: "The pen is mightier than the sword."
   },
   design: {
-    title: "Registered Design 🎨",
+    title: "Registered Design",
     image: "Registered%20Design%20Final.jpg",
     vibe: "First impressions speak before words do.",
-    description: "You appreciate elegance, symmetry, and thoughtful visual architecture. You are the person who notices kerning, corner radii, tactile finishes, and the subtle aesthetic details everyone else misses. You believe a product’s inner intelligence is judged almost entirely by how smooth its outer casing feels to the touch.",
+    description: "You appreciate elegance, symmetry, and thoughtful visual architecture. You are the person who notices kerning, corner radii, tactile finishes, and the subtle aesthetic details everyone else misses. You believe a product inner intelligence is judged almost entirely by how smooth its outer casing feels to the touch.",
     strength: "Impeccable taste and an instinct for visual harmony.",
     weakness: "Spending three weeks arguing over a Pantone shade while the launch deadline sails past.",
     motto: "Good design makes excellence look inevitable."
   },
   geographical_indication: {
-    title: "Geographical Indication 🌏",
+    title: "Geographical Indication",
     image: "GI%20Final.jpg",
     vibe: "You are deeply rooted in place, provenance, and time-honored tradition.",
     description: "You value authenticity, heritage, and genuine origin. You believe some things simply cannot be mass-produced in an anonymous industrial park because they are shaped by specific soil, micro-climates, and centuries of local craftsmanship. Friends see you as the guardian of true quality in a world full of generic imitations.",
@@ -61,7 +61,7 @@ const resultProfiles = {
     motto: "Some origins cannot be replicated."
   },
   plant_variety: {
-    title: "Plant Variety Protection 🌱",
+    title: "Plant Variety Protection",
     image: "PVP%20Final.jpg",
     vibe: "You are the long-term cultivator who knows that great things take time to grow.",
     description: "You enjoy nurturing ideas, projects, and people over multi-year horizons. While others demand immediate quarterly financial returns, you possess the patient discipline to breed stability, distinctness, and uniformity across generations. You know that innovation in nature cannot be rushed, only guided.",
@@ -70,16 +70,16 @@ const resultProfiles = {
     motto: "Great things grow with steady care."
   },
   trade_secret: {
-    title: "Trade Secret 🤫",
+    title: "Trade Secret",
     image: "Trade%20Secrets%20Final.jpg",
     vibe: "You are strategically mysterious.",
     description: "You operate in the shadows, behind biometric locks, encrypted servers, and ironclad non-disclosure agreements. You understand that information is power, discretion is safety, and publicity is overrated. People trust you with their deepest confidences because your operational security is absolute.",
     strength: "Exceptional judgment, discretion, and strategic discipline.",
-    weakness: "Being so difficult to read that your own team isn't entirely sure what you are working on.",
+    weakness: "Being so difficult to read that your own team is not entirely sure what you are working on.",
     motto: "Always keep them guessing."
   },
   public_domain: {
-    title: "Public Domain ⚖️",
+    title: "Public Domain",
     image: "PD%20Final.jpg",
     vibe: "You are the ultimate collaborator who builds for the collective commons.",
     description: "You believe that knowledge, foundational research, and core standards achieve their highest value when freely shared. Generous with your work, you prefer to give ideas to the world so that others can build upon them. You are far less concerned with claiming personal ownership than with leaving a lasting global impact.",
